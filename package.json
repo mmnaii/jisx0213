@@ -1,0 +1,34 @@
+{
+  "name": "@mmnaii/jisx0213",
+  "version": "1.0.0",
+  "description": "Library to get JIS X 0213 plane-row-cells and characters information",
+  "type": "module",
+  "main": "./lib/jisx0213.js",
+  "exports": {
+    "import": "./lib/jisx0213.js",
+    "require": "./lib/jisx0213.cjs"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "pretest": "node ./test/script/maketest.js",
+    "pretest:src": "node ./test/script/maketest.js",
+    "test": "npm run test:src",
+    "test:mjs": "node --test ./test/test-mjs.js",
+    "test:cjs": "node --test ./test/test-cjs.cjs",
+    "test:src": "node --test ./test/test-src.js",
+    "build": "npm run build:mjs && npm run build:cjs",
+    "build:mjs": "esbuild ./src/jisx0213.js --bundle --minify --keep-names --format=esm --outfile=./lib/jisx0213.js",
+    "build:cjs": "esbuild ./src/jisx0213.js --bundle --minify --keep-names --format=cjs --outfile=./lib/jisx0213.cjs",
+    "postbuild": "npm run pretest && npm run test:cjs && npm run test:mjs"
+  },
+  "keywords": [
+    "JIS X 0213"
+  ],
+  "author": "minami",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.25.5"
+  }
+}

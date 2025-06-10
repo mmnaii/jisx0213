@@ -1,0 +1,9 @@
+.DS_Store
+.npmrc
+/node_modules
+package-lock.json
+/lib
+/test/*
+!/test/script
+!/test/resource
+
