@@ -35,7 +35,7 @@
   "author": "minami",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mmnaii/jisx0213.git"
+    "url": "git+https://github.com/mmnaii/jisx0213.git"
   },
   "license": "MIT",
   "devDependencies": {
