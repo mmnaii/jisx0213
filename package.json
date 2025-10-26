@@ -24,9 +24,19 @@
     "postbuild": "npm run pretest && npm run test:cjs && npm run test:mjs"
   },
   "keywords": [
-    "JIS X 0213"
+    "JIS X 0213",
+    "joyo kanji",
+    "jinmeiyo kanji"
   ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "minami",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmnaii/jisx0213.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "esbuild": "^0.25.5"
